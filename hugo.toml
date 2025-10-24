@@ -1,0 +1,23 @@
+baseURL = 'https://shipit.peterhollmer.com/'
+languageCode = 'en-us'
+title = 'Ship It'
+theme = "papermod"
+
+[params]
+  homeInfoParams = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+
+[params.profileMode]
+  enabled = false
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
