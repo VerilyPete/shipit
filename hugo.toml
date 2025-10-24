@@ -8,7 +8,6 @@ theme = "papermod"
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  homeInfoParams = false
 
  [params.cover]
   image = "/images/shipitbrs.png"
