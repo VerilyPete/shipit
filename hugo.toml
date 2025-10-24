@@ -9,12 +9,6 @@ theme = "papermod"
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
 
- [params.cover]
-  image = "/images/shipitbrs.png"
-  alt = "Ship It"
-  caption = "Squirreling Tech on Shipping?"
-  relative = false
-
 [params.profileMode]
   enabled = false
 
