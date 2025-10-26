@@ -59,6 +59,15 @@ main() {
     git fetch --unshallow
   fi
 
+  # Inject Formspree endpoint if secret is set
+  if [ -n "${FORMSPREE_ENDPOINT:-}" ]; then
+    echo "Injecting Formspree endpoint from secret..."
+    sed -i.bak "s|YOUR_FORMSPREE_ENDPOINT|${FORMSPREE_ENDPOINT}|g" hugo.toml
+    rm -f hugo.toml.bak
+  else
+    echo "Warning: FORMSPREE_ENDPOINT secret not set"
+  fi
+
   # Build the site
   echo "Building the site..."
   hugo --gc --minify
