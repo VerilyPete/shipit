@@ -2,7 +2,7 @@
 date = '2025-10-23T21:37:28-05:00'
 draft = false
 title = "A Ship It Is Born"
-description = "The beginning of a journey into tech, development, and shipping great ideas."
+description = "Building things while thinking aloud."
 tags = ["meta", "introduction"]
 author = "Pete Hollmer"
 ShowToc = true

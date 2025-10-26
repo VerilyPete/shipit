@@ -27,7 +27,7 @@ theme = "papermod"
 
   # Home Info Mode
   [params.homeInfoParams]
-    Title = "Ship It 🚀"
+    Title = "Ship It"
     Content = """
     Welcome! I'm Pete, a software professional sharing insights on technology, development practices, and solutions to real-world problems.
     
