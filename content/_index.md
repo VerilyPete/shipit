@@ -1,7 +1,8 @@
 ---
 title: "Ship It"
+description: "Tech insights and solutions from a software professional"
 ---
 
-![Squirrel](/images/shipitbrs.png)
+![Ship It - Let's Build Something Great](/images/gbsquirrel.png)
 
-Welcome to my blog about Squirrels.
+Exploring the intersection of technology, best practices, and real-world problem solving. From development workflows to system design, this is where ideas meet execution.

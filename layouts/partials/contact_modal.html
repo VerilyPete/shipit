@@ -1,0 +1,79 @@
+<!-- Contact Form Modal -->
+<div id="contact-modal" class="modal">
+  <div class="modal-overlay" onclick="closeContactModal()"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Get in Touch</h2>
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-description">I'm always interested in discussing new opportunities and collaborations.</p>
+      <form action="{{ .Site.Params.formspreeEndpoint }}" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="modal-name">Name *</label>
+          <input type="text" id="modal-name" name="name" required placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-email">Email *</label>
+          <input type="email" id="modal-email" name="_replyto" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-subject">Subject *</label>
+          <input type="text" id="modal-subject" name="_subject" required placeholder="What's this about?">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-message">Message *</label>
+          <textarea id="modal-message" name="message" rows="5" required placeholder="Tell me more..."></textarea>
+        </div>
+
+        <!-- Formspree honeypot field to prevent spam -->
+        <input type="text" name="_gotcha" style="display:none">
+        
+        <!-- Formspree redirect after submission -->
+        <input type="hidden" name="_next" value="{{ .Site.BaseURL }}">
+
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+// Open contact modal when email icon is clicked
+document.addEventListener('DOMContentLoaded', function() {
+  const emailLinks = document.querySelectorAll('a[href="#contact-modal"]');
+  emailLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      openContactModal();
+    });
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeContactModal();
+    }
+  });
+});
+
+function openContactModal() {
+  const modal = document.getElementById('contact-modal');
+  if (modal) {
+    modal.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeContactModal() {
+  const modal = document.getElementById('contact-modal');
+  if (modal) {
+    modal.classList.remove('modal-open');
+    document.body.style.overflow = '';
+  }
+}
+</script>
+

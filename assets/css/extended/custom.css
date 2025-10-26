@@ -1,0 +1,531 @@
+/* Custom styling for Ship It blog */
+
+/* ============================================
+   Hero Image Styling (Banner Mode)
+   ============================================ */
+/* Target only the first image on the home page */
+body.list .main .post-content > p:first-child img,
+.home-info img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.list .main .post-content > p:first-child img:hover,
+.home-info img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode adjustments for hero image */
+.dark body.list .main .post-content > p:first-child img,
+.dark .home-info img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark body.list .main .post-content > p:first-child img:hover,
+.dark .home-info img:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile responsive hero */
+@media screen and (max-width: 768px) {
+    body.list .main .post-content > p:first-child img,
+    .home-info img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ============================================
+   Info Card Enhancement
+   ============================================ */
+.first-entry {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.first-entry:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dark .first-entry {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .first-entry:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Typography Enhancements
+   ============================================ */
+.main {
+    max-width: 760px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+.post-content p {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+/* Better code block styling */
+.post-content pre {
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.post-content code {
+    font-size: 0.9em;
+}
+
+/* Inline code styling */
+.post-content p code,
+.post-content li code {
+    background: rgba(135, 131, 120, 0.15);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.dark .post-content p code,
+.dark .post-content li code {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Social Icons Styling
+   ============================================ */
+.social-icons a {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+}
+
+/* ============================================
+   Post Entry Cards
+   ============================================ */
+.post-entry {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .post-entry:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Table of Contents Styling
+   ============================================ */
+.toc {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--code-bg);
+}
+
+.toc details summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.toc ul {
+    margin-top: 0.5rem;
+}
+
+.toc a {
+    transition: color 0.2s ease;
+}
+
+.toc a:hover {
+    color: var(--primary);
+}
+
+/* ============================================
+   Reading Time & Meta Information
+   ============================================ */
+.post-meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.post-meta .reading-time {
+    color: var(--secondary);
+}
+
+/* ============================================
+   Accent Colors
+   ============================================ */
+:root {
+    --accent-color: #4a90e2;
+    --accent-hover: #357abd;
+}
+
+.dark {
+    --accent-color: #64b5f6;
+    --accent-hover: #90caf9;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* ============================================
+   Button Styling
+   ============================================ */
+.button,
+button,
+input[type="submit"] {
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   Archive Page Styling
+   ============================================ */
+.archive-year {
+    margin-top: 2rem;
+}
+
+.archive-month {
+    margin-top: 1rem;
+}
+
+.archive-entry {
+    padding: 0.5rem 0;
+    transition: padding-left 0.2s ease;
+}
+
+.archive-entry:hover {
+    padding-left: 0.5rem;
+}
+
+/* ============================================
+   Responsive Improvements
+   ============================================ */
+@media screen and (max-width: 600px) {
+    .post-entry {
+        padding: 1rem;
+    }
+    
+    .first-entry {
+        padding: 1.5rem;
+    }
+    
+    .post-content pre {
+        padding: 1rem;
+        margin: 1rem -1rem;
+        border-radius: 0;
+    }
+}
+
+/* ============================================
+   Smooth Scrolling
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   Focus States for Accessibility
+   ============================================ */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Contact Form Styling
+   ============================================ */
+.contact-form-container {
+    margin-top: 2rem;
+    max-width: 600px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.dark .form-group input:focus,
+.dark .form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--secondary);
+    opacity: 0.6;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    padding: 0.875rem 2rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.submit-button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Mobile responsive form */
+@media screen and (max-width: 600px) {
+    .contact-form-container {
+        max-width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Contact Modal Styling
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.modal-open {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+
+.dark .modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+    z-index: 10000;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--secondary);
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--code-bg);
+    color: var(--primary);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-description {
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+}
+
+.modal-body .contact-form {
+    margin: 0;
+}
+
+.modal-body .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.modal-body .submit-button {
+    width: 100%;
+}
+
+/* Scrollbar styling for modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--code-bg);
+    border-radius: 0 12px 12px 0;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* Mobile responsive modal */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 1rem 1.25rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .modal-body {
+        padding: 1.25rem;
+    }
+
+    .modal-body .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
