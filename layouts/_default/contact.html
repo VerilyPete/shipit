@@ -10,8 +10,8 @@
   <div class="post-content">
     {{ .Content }}
 
+    <!-- Contact form temporarily hidden
     <div class="contact-form-container">
-      <!-- DEBUG params: {{ .Site.Params }} -->
       <form action="{{ .Site.Params.basinendpoint }}" method="POST" class="contact-form" data-ajax="true">
         <div class="form-group">
           <label for="name">Name *</label>
@@ -33,7 +33,6 @@
           <textarea id="message" name="message" rows="6" required placeholder="Tell me more..."></textarea>
         </div>
 
-        <!-- Honeypot field for spam prevention -->
         <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
 
         <div class="form-status" data-status></div>
@@ -41,6 +40,7 @@
         <button type="submit" class="submit-button">Send Message</button>
       </form>
     </div>
+    -->
   </div>
 
   <script>

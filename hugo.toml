@@ -47,10 +47,6 @@ theme = "papermod"
     name = "github"
     url = "https://github.com/VerilyPete"
 
-  [[params.socialIcons]]
-    name = "email"
-    url = "#contact-modal"
-
   # Contact form configuration (Basin)
   # Basin endpoints can be public; we inject via build for convenience
   # Example: https://usebasin.com/f/your_id
