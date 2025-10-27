@@ -11,6 +11,7 @@
     {{ .Content }}
 
     <div class="contact-form-container">
+      <!-- Hugo sees basinEndpoint as: [{{ .Site.Params.basinEndpoint }}] -->
       <form action="{{ .Site.Params.basinEndpoint }}" method="POST" class="contact-form" data-ajax="true">
         <div class="form-group">
           <label for="name">Name *</label>
