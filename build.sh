@@ -59,15 +59,6 @@ main() {
     git fetch --unshallow
   fi
 
-  # Inject Formspree endpoint if secret is set
-  if [ -n "${FORMSPREE_ENDPOINT:-}" ]; then
-    echo "Injecting Formspree endpoint from secret..."
-    sed -i.bak "s|YOUR_FORMSPREE_ENDPOINT|${FORMSPREE_ENDPOINT}|g" hugo.toml
-    rm -f hugo.toml.bak
-  else
-    echo "Warning: FORMSPREE_ENDPOINT secret not set"
-  fi
-
   # Inject Basin endpoint if secret is set
   if [ -n "${BASIN_ENDPOINT:-}" ]; then
     echo "Injecting Basin endpoint from secret..."
