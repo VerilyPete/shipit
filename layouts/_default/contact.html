@@ -11,8 +11,8 @@
     {{ .Content }}
 
     <div class="contact-form-container">
-      <!-- Hugo sees basinEndpoint as: [{{ .Site.Params.basinEndpoint }}] -->
-      <form action="{{ .Site.Params.basinEndpoint }}" method="POST" class="contact-form" data-ajax="true">
+      <!-- DEBUG params: {{ .Site.Params }} -->
+      <form action="{{ .Site.Params.basinendpoint }}" method="POST" class="contact-form" data-ajax="true">
         <div class="form-group">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" required placeholder="Your name">

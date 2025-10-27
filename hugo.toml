@@ -54,7 +54,7 @@ theme = "papermod"
   # Contact form configuration (Basin)
   # Basin endpoints can be public; we inject via build for convenience
   # Example: https://usebasin.com/f/your_id
-  basinEndpoint = "YOUR_BASIN_ENDPOINT"
+  basinendpoint = "YOUR_BASIN_ENDPOINT"
 
 # Menu
 [[menu.main]]
