@@ -1,6 +1,6 @@
 ---
 title: "Ship It"
-description: "Tech insights and solutions from a software professional"
+description: "Description goes here"
 ---
 
 ![Ship It - Let's Build Something Great](/images/gbsquirrel.png)

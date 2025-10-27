@@ -10,7 +10,7 @@
 <meta name="description" content="Tech insights and solutions from a software professional">
 <meta name="author" content="Pete Hollmer">
 <link rel="canonical" href="http://localhost:1313/categories/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.80e394b1973b934e1904282d3987c8b7d36a9aa0aede41b449e3b28db4ecd66a.css" integrity="sha256-gOOUsZc7k04ZBCgtOYfIt9NqmqCu3kG0SeOyjbTs1mo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.726eb4f7fbe79fe41938f194b8e8b5b55cd4d1ce6c6cc3dcecd49ea81668a7b7.css" integrity="sha256-cm609/vnn&#43;QZOPGUuOi1tVzU0c5sbMPc7NSeqBZop7c=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -164,7 +164,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-description">I'm always interested in discussing new opportunities and collaborations.</p>
-      <form action="" method="POST" class="contact-form">
+      <form action="" method="POST" class="contact-form" data-ajax="true">
         <div class="form-group">
           <label for="modal-name">Name *</label>
           <input type="text" id="modal-name" name="name" required placeholder="Your name">
@@ -172,12 +172,12 @@
 
         <div class="form-group">
           <label for="modal-email">Email *</label>
-          <input type="email" id="modal-email" name="_replyto" required placeholder="your.email@example.com">
+          <input type="email" id="modal-email" name="email" required placeholder="your.email@example.com">
         </div>
 
         <div class="form-group">
           <label for="modal-subject">Subject *</label>
-          <input type="text" id="modal-subject" name="_subject" required placeholder="What's this about?">
+          <input type="text" id="modal-subject" name="subject" required placeholder="What's this about?">
         </div>
 
         <div class="form-group">
@@ -186,10 +186,9 @@
         </div>
 
         
-        <input type="text" name="_gotcha" style="display:none">
-        
-        
-        <input type="hidden" name="_next" value="http://localhost:1313/">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
+
+        <div class="form-status" data-status></div>
 
         <button type="submit" class="submit-button">Send Message</button>
       </form>
@@ -213,6 +212,24 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') {
       closeContactModal();
     }
+  });
+
+  
+  document.querySelectorAll('.contact-form').forEach(function(form){
+    form.addEventListener('submit', async function(e){
+      if (!form.dataset.ajax) return;
+      e.preventDefault();
+      const btn = form.querySelector('[type="submit"]');
+      const status = form.querySelector('[data-status]');
+      btn.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }});
+        if (res.ok) { status.textContent = 'Thanks! Your message was sent.'; form.reset(); }
+        else { status.textContent = 'Sorry, something went wrong. Please try again.'; }
+      } catch (_) { status.textContent = 'Network error. Please try again.'; }
+      btn.disabled = false;
+    });
   });
 });
 

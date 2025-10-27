@@ -37,7 +37,7 @@ body.list .main .post-content > p:first-child img:hover,
 @media screen and (max-width: 768px) {
     body.list .main .post-content > p:first-child img,
     .home-info img {
-        max-width: 100%;
+        max-width: 30%;
         margin-bottom: 1.5rem;
     }
 }
@@ -528,4 +528,14 @@ button:focus {
         margin-bottom: 1rem;
     }
 }
+
+/* Status messages */
+.form-status {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+.form-status.success { color: #2e7d32; }
+.form-status.error { color: #c62828; }
 

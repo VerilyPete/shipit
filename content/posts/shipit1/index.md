@@ -11,4 +11,4 @@ TocOpen = false
 
 ![Ship It Squirrel](shipitbrs.png)
 
-Welcome to the first post on Ship It! This blog is dedicated to sharing practical insights about technology, software development, and the art of actually getting things done.
+Lorem ipsum etc

@@ -51,10 +51,10 @@ theme = "papermod"
     name = "email"
     url = "#contact-modal"
 
-  # Contact form configuration
-  # Formspree endpoints are designed to be public - they handle spam protection server-side
-  # Get your endpoint from https://formspree.io (looks like: https://formspree.io/f/xyzabc123)
-  formspreeEndpoint = "YOUR_FORMSPREE_ENDPOINT"
+  # Contact form configuration (Basin)
+  # Basin endpoints can be public; we inject via build for convenience
+  # Example: https://usebasin.com/f/your_id
+  basinEndpoint = "YOUR_BASIN_ENDPOINT"
 
 # Menu
 [[menu.main]]

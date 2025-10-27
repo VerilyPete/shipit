@@ -68,6 +68,15 @@ main() {
     echo "Warning: FORMSPREE_ENDPOINT secret not set"
   fi
 
+  # Inject Basin endpoint if secret is set
+  if [ -n "${BASIN_ENDPOINT:-}" ]; then
+    echo "Injecting Basin endpoint from secret..."
+    sed -i.bak "s|YOUR_BASIN_ENDPOINT|${BASIN_ENDPOINT}|g" hugo.toml
+    rm -f hugo.toml.bak
+  else
+    echo "Warning: BASIN_ENDPOINT secret not set"
+  fi
+
   # Build the site
   echo "Building the site..."
   hugo --gc --minify

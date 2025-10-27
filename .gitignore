@@ -1,4 +1,28 @@
 /public
 /resources
 .hugo_build.lock
+
+# Environment & Secrets
+.env
+.env.local
+.dev.vars
+.dev.vars.local
+
+# OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build artifacts
+dist/
+build/
