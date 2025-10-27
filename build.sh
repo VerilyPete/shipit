@@ -64,6 +64,9 @@ main() {
     echo "Injecting Basin endpoint from secret..."
     sed -i.bak "s|YOUR_BASIN_ENDPOINT|${BASIN_ENDPOINT}|g" hugo.toml
     rm -f hugo.toml.bak
+    # Echo the resolved value from hugo.toml for verification
+    echo "hugo.toml basinEndpoint line:" && grep -n "^\s*basinEndpoint\s*=\s*\".*\"" hugo.toml || true
+    echo "Resolved basinEndpoint value: \"$(grep -E "^\s*basinEndpoint\s*=\s*\".*\"" hugo.toml | sed 's/.*= *\"//; s/\".*//')\""
   else
     echo "Warning: BASIN_ENDPOINT secret not set"
   fi
