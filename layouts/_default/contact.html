@@ -11,7 +11,7 @@
     {{ .Content }}
 
     <div class="contact-form-container">
-      <form action="{{ .Site.Params.basinEndpoint }}" method="POST" class="contact-form" data-ajax="true" enctype="multipart/form-data">
+      <form action="{{ .Site.Params.basinEndpoint }}" method="POST" class="contact-form" data-ajax="true">
         <div class="form-group">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" required placeholder="Your name">
