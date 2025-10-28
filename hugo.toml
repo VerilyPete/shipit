@@ -4,7 +4,7 @@ title = 'Ship It'
 theme = "papermod"
 
 [params]
-  description = "Tech insights and solutions from a software professional"
+  description = "Building things while thinking aloud."
   author = "Pete Hollmer"
   
   # Theme behavior
@@ -29,9 +29,9 @@ theme = "papermod"
   [params.homeInfoParams]
     Title = "Ship It"
     Content = """
-    Welcome! I'm Pete, a software professional sharing insights on technology, development practices, and solutions to real-world problems.
+    Welcome! I'm Pete, a software industry veteran sharing an opinionated take
+    on technology as well as my own random musings.
     
-    Here you'll find practical technical content, lessons learned, and ideas worth shipping.
     """
 
   # Profile mode disabled (using info card instead)

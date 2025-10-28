@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ship It</title>
-    <link>https://shipit.peterhollmer.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Ship It</description>
     <generator>Hugo -- 0.152.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Oct 2025 00:07:00 -0500</lastBuildDate>
-    <atom:link href="https://shipit.peterhollmer.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Containers</title>
-      <link>https://shipit.peterhollmer.com/posts/containers/</link>
+      <link>http://localhost:1313/posts/containers/</link>
       <pubDate>Tue, 28 Oct 2025 00:07:00 -0500</pubDate>
-      <guid>https://shipit.peterhollmer.com/posts/containers/</guid>
+      <guid>http://localhost:1313/posts/containers/</guid>
       <description>&lt;h1 id=&#34;apples-native-containers-in-macos-26&#34;&gt;Apple’s Native Containers in macOS 26&lt;/h1&gt;
-&lt;p&gt;With the furor around Liquid Glass, it’s easy to miss that in the latest release of macOS, Apple has quietly added their own unique take on containers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Author’s note: Apple released an update to their container runtime overnight, putting it at a&lt;/em&gt; &lt;a href=&#34;https://github.com/apple/container/releases/tag/0.6.0&#34;&gt;&lt;em&gt;v0.6.0 release&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. (&lt;/em&gt;&lt;a href=&#34;https://github.com/apple/container/compare/0.5.0...0.6.0&#34;&gt;&lt;em&gt;Changelog&lt;/em&gt;&lt;/a&gt; &lt;em&gt;…oooh, support for subnets!) I’ll put that through the same tests and report back here.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With all the buzz around Liquid Glass in Tahoe, it’s easy to miss that Apple quietly introduced its own container runtime in the latest macOS release.&lt;/p&gt;
 &lt;h3 id=&#34;containers&#34;&gt;Containers?&lt;/h3&gt;
-&lt;p&gt;If you’re reading this, you’re probably somewhat familiar with containers. Just in case, I’ll give a condensed explanation.&lt;/p&gt;
-&lt;p&gt;Containerization is the practice of packaging an application together with all of its underlying dependencies into a tidy bundle that can be distributed and run on any platform with supported architecture. Namespaces and cgroups (both features of the Linux kernel) confine what the container can see and keep its resource usage within specified limits. The result is an application running in an isolated environment without the associated bloat of virtualizing an entire operating system.&lt;/p&gt;</description>
+&lt;p&gt;If you’re reading this, you’re probably somewhat familiar with containers. Just in case you aren’t, I’ll give a condensed explanation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Get in Touch</title>
-      <link>https://shipit.peterhollmer.com/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shipit.peterhollmer.com/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>Contact Pete Hollmer about tech opportunities and collaborations</description>
     </item>
   </channel>
