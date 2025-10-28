@@ -93,6 +93,12 @@ body.list .main .post-content > p:first-child img:hover,
     margin: 1.5rem 0;
 }
 
+/* Add breathing room around post images */
+.post-content img {
+    margin: 2rem 0;
+    display: block;
+}
+
 .post-content code {
     font-size: 0.9em;
 }
