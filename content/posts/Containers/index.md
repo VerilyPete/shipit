@@ -17,7 +17,7 @@ Containerization is the practice of packaging an application together with all o
 
 Containers need a Linux kernel since they’re using Linux kernel features. In the past, that meant that in Docker (the most popular containerization platform) on macOS you were running a single Linux VM and all of your containers lived within it.
 
-!\[A Docker VM with three containers inside\](dockervm.jpg)
+![A Docker VM with three containers inside](dockervm.jpg)
 
 When I say “Docker” for the purpose of the post, I’ll be referring to [Docker CLI](https://www.docker.com/products/cli/) running as the management layer, backed by [Colima](https://github.com/abiosoft/colima) handling the underlying virtualization.  
   
@@ -31,14 +31,14 @@ _A note on nomenclature: Apple named their API and CLI tools for working with Li
 
 With the CLI tool container, Apple is blurring the lines between traditional containerization and virtualization. Instead of hosting containers in a shared VM, Apple has chosen to give each container its own virtual machine - complete with its own ext4-based block storage, IP address, and user-definable CPU & memory limits. On M3 or newer hardware, you can even [nest virtualization inside of a container.](https://github.com/apple/container/blob/main/docs/how-to.md#expose-virtualization-capabilities-to-a-container) (We’re all thinking the same infinite recursion joke, right?)
 
-!\[Apple container with 3 VMs isolated\](containervm.jpg)
+![Apple container with 3 VMs isolated](containervm.jpg)
 
 The first time you launch the container system via ‘container system start’, you’ll notice something: there’s zero delay. With no host VM to launch, you press enter and you’re immediately back at a prompt. It’s a change compared to the ~15 second wait of starting Colima and had me wondering if something had gone wrong the first time I ran it.
 
   
 Much like Colima on Apple Silicon, Apple uses their Virtualization.framework to host these per-container virtual machines. Apple containers don’t share resources, so you can assign resources per-container independently instead of accounting for total consumption at a shared VM layer or risking OOMKills. The containerization framework also uses [memory balloon devices](https://developer.apple.com/documentation/virtualization/vzvirtualmachineconfiguration/memoryballoondevices) in its implementation of Virtualization.framework and manages the allocated real memory more aggressively than Colima. See below: those are two instances of the same container, one hosted by Colima in Virtualization.framework, the other by Apple’s native container runtime.
 
-!\[Activity Monitor showing two VM processes\](limavscontainermem.jpg)
+![Activity Monitor showing two VM processes](limavscontainermem.jpg)
 
 Apple’s container runtime follows the [Open Containers Initiative](https://opencontainers.org) image & runtime spec. This means your current Docker/Podman/Kubernetes images & registries are compatible. Apple’s Rosetta 2 translation layer is also supported, allowing you to run amd64 images on Apple Silicon through the use of the —platform flag.
 
@@ -76,7 +76,7 @@ Colima’s VM was started with 4 CPUs & 3GB of RAM to allow 2GB for containers w
 
 We’ll start off with a small suite of simple benchmarks that I created in Cursor to test the following: pulling a container, container cold start, warm start, lifecycle (create, run, rm), starting 5 containers in parallel, and creating 1000 temp files. You can find the script in the Gist above.
 
-!\[Docker had the advantage\](startup\_performance.jpg)
+![Docker had the advantage](startup_performance.jpg)
 
 My takeaways from this chart:
 
@@ -92,13 +92,13 @@ Moving on to the stress-ng, fio & 7zip benchmarks. You can find the exact syntax
 
 We’ll start with stress-ng running its “iomix” I/O suite on 4 workers simultaneously for 30 seconds.
 
-!\[stress-ng's iomix results\](iomix\_4\_workers.png)
+![stress-ng's iomix results](iomix_4_workers.png)
 
 For this test, the native container runtime made better use of its CPU and trounced Docker. It used 73% more of its CPU to reliably return 31x more I/O Mix operations.
 
 The next test has stress-ng running 4 CPU stressors and 2 memory stressors in parallel for 30 seconds.
 
-!\[stress-ng memory & cpu test\](stress\_ng\_memory\_cpu.png)
+![stress-ng memory & cpu test](stress_ng_memory_cpu.png)
 
 - CPU performance was evenly matched, while memory performance strongly favored the native implementation.
 - The native CPU results seemed silly. If you check the text output, it’s actually 0.02% system time. The CPU operations of this test run almost entirely in userspace, so the low kernel utilization makes sense.
@@ -107,19 +107,19 @@ The next test has stress-ng running 4 CPU stressors and 2 memory stressors in pa
 
 [Fio](https://github.com/axboe/fio) is the Flexible I/O tester. Its raison d’être is running reproducible I/O load testing in any number of shapes. I criminally underutilized it with the pair of tests that I ran, starting with this test that performed 10 seconds of 4k reads on a single worker.
 
-!\[fio randomized 4k read\](fio\_randread\_comparison.png)
+![fio randomized 4k read](fio_randread_comparison.png)
 
 I can’t explain an interesting shift that we see here. Fio shows the opposite of the previous results, with Docker performing substantially better than the native container runtime.
 
 That result holds up as we move on to a test that performs a mix of 70% read and 30% write on 8k blocks across four simultaneous workers.
 
-!\[Mixed read/write\](mixed\_rw\_fio\_comparison.png)
+![Mixed read/write](mixed_rw_fio_comparison.png)
 
 * * *
 
 The final test I ran was 7zip’s “b” benchmark, where we hammered on the CPU as it compressed and then decompressed data with the LZMA algorithm.
 
-!\[7zip test\](7zip\_benchmark\_comparison.png)
+![7zip test](7zip_benchmark_comparison.png)
 
 This final test supports the earlier CPU-based benchmarks with very similar results. In every category, we’re near (or under) 1% difference.
 
