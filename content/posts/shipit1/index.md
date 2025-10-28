@@ -1,6 +1,6 @@
 +++
 date = '2025-10-23T21:37:28-05:00'
-draft = false
+draft = true
 title = "A Ship It Is Born"
 description = "Building things while thinking aloud."
 tags = ["meta", "introduction"]
