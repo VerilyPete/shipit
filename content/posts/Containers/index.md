@@ -1,7 +1,12 @@
 +++
 date = '2025-10-28T00:07:00-05:00'
 draft = false
-title = 'Containers'
+title = "Apple's native container runtime"
+
+[cover]
+image = 'containervm.jpg'
+alt = 'Three Apple container runtimes, each with a linux VM.'
+relative = true
 +++
 # Apple’s Native Containers in macOS 26
 
