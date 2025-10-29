@@ -48,7 +48,7 @@ When the container runtime launches for the first time, it will fetch the kernel
 
 ### Using the container runtime
 
-If you’re familiar with Docker’s CLI syntax, you’ll feel right at home. The team behind container has kept the syntax almost entirely unchanged. I’ve read accounts of people swapping Docker for Podman and aliasing “docker” to “podman” and going on with their lives without encountering any issues. That would _almost_ work here too. (“container run —help | wc -l” returns a count of 70 lines. The same command on Docker returns 112 lines, so you may find some options missing.)
+If you’re familiar with Docker’s CLI syntax, you’ll feel right at home. The team behind container has kept the syntax almost entirely unchanged. I’ve read accounts of people swapping [Podman](https://podman.io) for Docker and aliasing “docker” to “podman” and going on with their lives without encountering any issues. That would _almost_ work here too. (“container run —help | wc -l” returns a count of 70 lines. The same command on Docker returns 112 lines, so you may find some options missing.)
 
 The one notable difference is that when launching the container, you’re configuring the CPU and memory count of the VM. If you aren’t happy with a given container’s baked-in defaults, you need to [add those flags.](https://github.com/apple/container/blob/main/docs/command-reference.md)
 

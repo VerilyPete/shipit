@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Ship It</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://shipit.peterhollmer.com/posts/</link>
     <description>Recent content in Posts on Ship It</description>
     <generator>Hugo -- 0.152.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Oct 2025 00:07:00 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shipit.peterhollmer.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Containers</title>
-      <link>http://localhost:1313/posts/containers/</link>
+      <link>https://shipit.peterhollmer.com/posts/containers/</link>
       <pubDate>Tue, 28 Oct 2025 00:07:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/containers/</guid>
+      <guid>https://shipit.peterhollmer.com/posts/containers/</guid>
       <description>&lt;h1 id=&#34;apples-native-containers-in-macos-26&#34;&gt;Apple’s Native Containers in macOS 26&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Author’s note: Apple released an update to their container runtime overnight, putting it at a&lt;/em&gt; &lt;a href=&#34;https://github.com/apple/container/releases/tag/0.6.0&#34;&gt;&lt;em&gt;v0.6.0 release&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. (&lt;/em&gt;&lt;a href=&#34;https://github.com/apple/container/compare/0.5.0...0.6.0&#34;&gt;&lt;em&gt;Changelog&lt;/em&gt;&lt;/a&gt; &lt;em&gt;…oooh, support for subnets!) I’ll put that through the same tests and report back here.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;With all the buzz around Liquid Glass in Tahoe, it’s easy to miss that Apple quietly introduced its own container runtime in the latest macOS release.&lt;/p&gt;
