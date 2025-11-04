@@ -4,12 +4,22 @@
     <title>Posts on Ship It</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Ship It</description>
-    <generator>Hugo -- 0.152.1</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Oct 2025 00:07:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Nov 2025 13:42:47 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apple&#39;s native container runtime</title>
+      <title>Container Follow Up</title>
+      <link>http://localhost:1313/posts/container-follow-up/</link>
+      <pubDate>Tue, 04 Nov 2025 13:42:47 -0600</pubDate>
+      <guid>http://localhost:1313/posts/container-follow-up/</guid>
+      <description>&lt;h1 id=&#34;follow-up-on-apples-container-runtime&#34;&gt;Follow up on Apple’s container runtime.&lt;/h1&gt;
+&lt;p&gt;I wrote a post about Apple’s container runtime that’s new in macOS 26. Afterward, I saw several questions pop up multiple times, so I thought I’d answer them.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“How does Apple make these VMs boot in under a second?”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There’s a &lt;a href=&#34;https://www.youtube.com/watch?v=JvQtvbhtXmo&#34;&gt;video from WWDC&lt;/a&gt; that explains it nicely, but here’s the condensed version. The VM that hosts each container has been stripped of &lt;em&gt;anything&lt;/em&gt; that isn’t required to support a container. No libraries (including libc), no utilities, and no support for legacy hardware. Also, the container runtime is macOS-only, so it expects to lean on many of the OS features to support networking, service management, interprocess communication, logging, and more.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Apple&#39;s native container v0.5.0 runtime</title>
       <link>http://localhost:1313/posts/containers/</link>
       <pubDate>Tue, 28 Oct 2025 00:07:00 -0500</pubDate>
       <guid>http://localhost:1313/posts/containers/</guid>
@@ -18,6 +28,13 @@
 &lt;p&gt;With all the buzz around Liquid Glass in Tahoe, it’s easy to miss that Apple quietly introduced its own container runtime in the latest macOS release.&lt;/p&gt;
 &lt;h3 id=&#34;containers&#34;&gt;Containers?&lt;/h3&gt;
 &lt;p&gt;If you’re reading this, you’re probably somewhat familiar with containers. Just in case you aren’t, I’ll give a condensed explanation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Ship It Is Born</title>
+      <link>http://localhost:1313/posts/shipit1/</link>
+      <pubDate>Thu, 23 Oct 2025 21:37:28 -0500</pubDate>
+      <guid>http://localhost:1313/posts/shipit1/</guid>
+      <description>Building things while thinking aloud.</description>
     </item>
   </channel>
 </rss>
