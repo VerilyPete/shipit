@@ -1,6 +1,6 @@
 +++
 date = '2025-11-04T13:42:47-06:00'
-draft = true
+draft = false
 title = 'Container Follow Up'
 +++
 
