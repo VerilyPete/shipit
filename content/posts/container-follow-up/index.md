@@ -4,6 +4,11 @@ draft = false
 title = 'Container Follow Up'
 +++
 
+[cover]
+image = 'ian-taylor-jOqJbvo1P9g-unsplash.jpg'
+alt = 'Definitely not an Apple VM.'
+relative = true
+
 # Follow up on Apple’s container runtime.
 ![Clearly a non-apple VM](ian-taylor-jOqJbvo1P9g-unsplash.jpg)
 I wrote a post about Apple’s container runtime that’s new in macOS 26. Afterward, I saw several questions pop up multiple times, so I thought I’d answer them.
