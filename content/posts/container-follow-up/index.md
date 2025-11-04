@@ -3,11 +3,6 @@ date = '2025-11-04T13:42:47-06:00'
 draft = false
 title = 'Container Follow Up'
 
-[cover]
-image = 'ian-taylor-jOqJbvo1P9g-unsplash.jpg'
-alt = 'Definitely not an Apple VM.'
-relative = true
-
 +++
 
 # Follow up on Apple’s container runtime.
