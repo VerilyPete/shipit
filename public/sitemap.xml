@@ -2,22 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shipit.peterhollmer.com/posts/container-follow-up/</loc>
+    <loc>http://localhost:1313/posts/yolocontainer/</loc>
+    <lastmod>2025-11-12T09:03:04-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-11-12T09:03:04-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-12T09:03:04-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/container-follow-up/</loc>
     <lastmod>2025-11-04T13:42:47-06:00</lastmod>
   </url><url>
-    <loc>https://shipit.peterhollmer.com/posts/</loc>
-    <lastmod>2025-11-04T13:42:47-06:00</lastmod>
-  </url><url>
-    <loc>https://shipit.peterhollmer.com/</loc>
-    <lastmod>2025-11-04T13:42:47-06:00</lastmod>
-  </url><url>
-    <loc>https://shipit.peterhollmer.com/posts/containers/</loc>
+    <loc>http://localhost:1313/posts/containers/</loc>
     <lastmod>2025-10-28T00:07:00-05:00</lastmod>
   </url><url>
-    <loc>https://shipit.peterhollmer.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://shipit.peterhollmer.com/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>https://shipit.peterhollmer.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
